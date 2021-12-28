@@ -10,6 +10,8 @@ heroku = "*"
 [packages]
 django = "*"
 gunicorn = "*"
+python-dateutil = "*"
+pyhton-dateutil = "*"
 
 [requires]
 python_version = "3.9"
