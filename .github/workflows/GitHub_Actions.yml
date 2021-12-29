@@ -22,6 +22,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install  pipenv
         pipenv sync -d
+        cp contrib/env-sample .env
     - name: Verificar a qualidade do código com Flake8
       run: |
         pipenv run flake8
