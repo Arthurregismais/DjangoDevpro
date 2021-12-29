@@ -6,6 +6,10 @@ verify_ssl = true
 [dev-packages]
 flake8 = "*"
 heroku = "*"
+pytest-django = "*"
+pytest-cov = "*"
+coverage = "*"
+codecov = "*"
 
 [packages]
 django = "*"
