@@ -25,3 +25,13 @@ jobs:
     - name: Verificar a qualidade do código com Flake8
       run: |
         pipenv run flake8
+    - name: Rodar os testes
+      run: |
+        pipenv run pytest primeiraAplicacaoDjango --cov=primeiraAplicacaoDjango
+    - name: Enviar o relatório ao codecov
+      env:
+        CODECOV_TOKEN: 'b78d6f8f-8114-4a30-852a-859e55467850'
+      run:
+        pipenv run codecov
+
+
