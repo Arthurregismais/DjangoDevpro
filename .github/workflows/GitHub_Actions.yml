@@ -11,24 +11,35 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    services:
+      postgres:
+        image: postgres:13.5
+
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
         python-version: '3.9'
+
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install  pipenv
         pipenv sync -d
         cp contrib/env-sample .env
+    - name: Criar um banco de dados para os testes
+      run: |
+        psql -c "CREATE DATABASE testdb;" -U postgres
+
     - name: Verificar a qualidade do código com Flake8
       run: |
         pipenv run flake8
+
     - name: Rodar os testes
       run: |
         pipenv run pytest primeiraAplicacaoDjango --cov=primeiraAplicacaoDjango
+
     - name: Enviar o relatório ao codecov
       env:
         CODECOV_TOKEN: 'b78d6f8f-8114-4a30-852a-859e55467850'
