@@ -33,9 +33,6 @@ jobs:
         pip install  pipenv
         pipenv sync -d
         cp contrib/env-sample .env
-    - name: Criar um banco de dados para os testes
-      run: |
-        psql -c "CREATE DATABASE testdb;" -U postgres
 
     - name: Verificar a qualidade do código com Flake8
       run: |
