@@ -133,6 +133,8 @@ MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
 
 COLLECTFAST_ENABLED = False
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+COLLECTFAST_STRATEGY = 'collectfast.strategies.boto3.Boto3Strategy'
 
 AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
 
