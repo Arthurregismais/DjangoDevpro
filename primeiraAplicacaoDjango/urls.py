@@ -22,6 +22,7 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('primeiraAplicacaoDjango.base.urls')),
+    path('aperitivos/', include('primeiraAplicacaoDjango.aperitivos.urls')),
 ]
 
 if settings.DEBUG:
