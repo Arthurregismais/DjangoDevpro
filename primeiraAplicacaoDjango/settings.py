@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'collectfast',
     'django.contrib.staticfiles',
     'primeiraAplicacaoDjango.base',
+    'primeiraAplicacaoDjango.aperitivos'
 ]
 
 MIDDLEWARE = [
