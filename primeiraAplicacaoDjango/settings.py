@@ -49,7 +49,8 @@ INSTALLED_APPS = [
     'collectfast',
     'django.contrib.staticfiles',
     'primeiraAplicacaoDjango.base',
-    'primeiraAplicacaoDjango.aperitivos'
+    'primeiraAplicacaoDjango.aperitivos',
+    'primeiraAplicacaoDjango.modulos',
 ]
 
 MIDDLEWARE = [
@@ -75,6 +76,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'primeiraAplicacaoDjango.modulos.context_processors.listar_modulos',
             ],
         },
     },

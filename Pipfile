@@ -11,6 +11,8 @@ pytest-cov = "*"
 coverage = "*"
 codecov = "*"
 pytest = "*"
+model-mommy = "*"
+django-debug-toolbar = "*"
 
 [packages]
 django = "*"
@@ -21,7 +23,6 @@ dj-database-url = "*"
 psycopg2-binary = "*"
 django-s3-folder-storage = "*"
 collectfast = "*"
-django-debug-toolbar = "*"
 sentry-sdk = "*"
 
 [requires]
