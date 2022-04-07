@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'primeiraAplicacaoDjango.base',
     'primeiraAplicacaoDjango.aperitivos',
     'primeiraAplicacaoDjango.modulos',
+    'ordered_model',
 ]
 
 MIDDLEWARE = [

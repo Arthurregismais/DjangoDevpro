@@ -1,9 +1,9 @@
 import pytest
-from django.test import TestCase
 from django.urls import reverse
 from primeiraAplicacaoDjango.aperitivos.models import Video
 from primeiraAplicacaoDjango.django_assertions import assert_contains
 from model_mommy import mommy
+
 
 @pytest.fixture
 def video(db):
@@ -38,5 +38,5 @@ def test_conteudo_video(resp, video):
 
 """
 aqui comentado a parte que eu tirei do test_conteudo_video caso pare de funcionar:
-?h=896429f7a1&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+?h=896429f7a1&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
 """
