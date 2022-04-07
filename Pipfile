@@ -24,6 +24,7 @@ psycopg2-binary = "*"
 django-s3-folder-storage = "*"
 collectfast = "*"
 sentry-sdk = "*"
+django-ordered-model = "*"
 
 [requires]
 python_version = "3.9"

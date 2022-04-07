@@ -1,5 +1,4 @@
 import pytest
-from django.test import TestCase
 from django.urls import reverse
 from model_mommy import mommy
 from primeiraAplicacaoDjango.aperitivos.models import Video
@@ -29,6 +28,3 @@ def test_link_video(resp, videos):
     for video in videos:
         video_link = reverse('aperitivos:video', args=(video.slug,))
         assert_contains(resp, f'href="{video_link}"')
-
-
-
