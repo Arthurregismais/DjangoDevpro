@@ -28,8 +28,7 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="97f30b40-a58d-4e55-a9b0-5b6b3b2d014a">
-      <console name="curso_django" type="STANDARD" schema="public" session="Main"><![CDATA[SELECT m.id, m.titulo, a.id, a.titulo, a.modulo_id FROM modulos_modulo AS m JOIN modulos_aula a on m.id = 
-a.modulo_id WHERE m.id= 3 ;]]></console>
+      <console name="curso_django" type="STANDARD" schema="public" session="Main"><![CDATA[SELECT * FROM modulos_aula;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
