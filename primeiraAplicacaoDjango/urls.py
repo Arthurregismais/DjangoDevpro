@@ -24,6 +24,7 @@ urlpatterns = [
     path('', include('primeiraAplicacaoDjango.base.urls')),
     path('aperitivos/', include('primeiraAplicacaoDjango.aperitivos.urls')),
     path('modulos/', include('primeiraAplicacaoDjango.modulos.urls')),
+    path('turmas/', include('primeiraAplicacaoDjango.turmas.urls')),
 ]
 
 if settings.DEBUG:
