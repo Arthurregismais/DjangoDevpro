@@ -8,6 +8,7 @@ class Turma(models.Model):
     slug = models.SlugField(max_length=64)
     inicio = models.DateTimeField()
     fim = models.DateTimeField()
+
     alunos = models.ManyToManyField(get_user_model(), through='Matricula')
 
 
@@ -19,3 +20,4 @@ class Matricula(models.Model):
     class Meta:
         unique_together = [['usuario', 'turma']]
         ordering = [['turma', 'data']]
+
