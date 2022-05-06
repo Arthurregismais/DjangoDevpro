@@ -18,8 +18,8 @@ def aula(modulo):
 
 
 @pytest.fixture
-def resp(client, aula):
-    resp = client.get(reverse('modulos:aula', kwargs={'slug': aula.slug}))
+def resp(client_com_usuario_logado, aula):
+    resp = client_com_usuario_logado.get(reverse('modulos:aula', kwargs={'slug': aula.slug}))
     return resp
 
 
@@ -38,3 +38,14 @@ def test_modulo_breadcrumb(resp, modulo: Modulo):
 
 def test_link_modulo(resp, modulo: Modulo):
     assert_contains(resp, modulo.get_absolute_url())
+
+
+@pytest.fixture
+def resp_sem_usuario(client, aula):
+    resp = client.get(reverse('modulos:aula', kwargs={'slug': aula.slug}))
+    return resp
+
+
+def test_usuario_sem_estar_logado_redirect(resp_sem_usuario):
+    assert resp_sem_usuario.status_code == 302
+    assert resp_sem_usuario.url.startswith(reverse('login'))
