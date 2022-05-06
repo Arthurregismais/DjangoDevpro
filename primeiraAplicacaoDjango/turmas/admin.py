@@ -1,7 +1,8 @@
 from django.contrib import admin
 
 # Register your models here.
-from primeiraAplicacaoDjango.turmas.models import Turma
+from primeiraAplicacaoDjango.modulos.models import Modulo
+from primeiraAplicacaoDjango.turmas.models import Turma, Matricula
 
 
 class MatriculaInline(admin.TabularInline):
@@ -14,7 +15,7 @@ class MatriculaInline(admin.TabularInline):
 
 @admin.register(Turma)
 class TurmaAdmin(admin.ModelAdmin):
-    inline = [MatriculaInline]
+    inlines = [MatriculaInline,]
     list_display = ('nome', 'slug', 'inicio', 'fim')
     prepopulated_fields = {'slug': ('nome',)}
     ordering = ('-inicio',)
