@@ -17,12 +17,8 @@
     },
     "default": {
         "asgiref": {
-            "hashes": [
-                "sha256:45a429524fba18aba9d512498b19d220c4d628e75b40cf5c627524dbaebc5cc1",
-                "sha256:fddeea3c53fa99d0cdb613c3941cc6e52d822491fc2753fba25768fb5bf4e865"
-            ],
-            "markers": "python_version >= '3.7'",
-            "version": "==3.5.1"
+            "hashes": [],
+            "version": "==3.8.1"
         },
         "asttokens": {
             "hashes": [
@@ -384,12 +380,8 @@
     },
     "develop": {
         "asgiref": {
-            "hashes": [
-                "sha256:45a429524fba18aba9d512498b19d220c4d628e75b40cf5c627524dbaebc5cc1",
-                "sha256:fddeea3c53fa99d0cdb613c3941cc6e52d822491fc2753fba25768fb5bf4e865"
-            ],
-            "markers": "python_version >= '3.7'",
-            "version": "==3.5.1"
+            "hashes": [],
+            "version": "==3.8.1"
         },
         "atomicwrites": {
             "hashes": [
